@@ -1,6 +1,25 @@
 # Maven #
-target/
+**/target/
 
-# IDEA #
-.idea/
-*.iml
+# Eclipse #
+.metadata/
+.recommenders
+**/.classpath
+**/.project
+**/.settings/
+
+# Servers #
+/Servers/
+
+# OS #
+.DS_Store
+
+# properties file #
+**/*.properties
+
+# mybatis generator project #
+/generatorSqlmapCustom/
+
+# Web Output #
+**/classes/
+**/lib/
