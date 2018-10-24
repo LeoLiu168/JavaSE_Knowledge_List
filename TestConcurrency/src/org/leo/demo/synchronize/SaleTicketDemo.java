@@ -1,4 +1,4 @@
-package org.leo.demo.concurrency;
+package org.leo.demo.synchronize;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -25,34 +25,6 @@ public class SaleTicketDemo {
 		new Thread(() -> {for (int i = 0; i<40;i++) ticket.sale();}, "BB").start();
 		new Thread(() -> {for (int i = 0; i<40;i++) ticket.sale();}, "CC").start();
 		
-//		new Thread(new Runnable() {
-//			
-//			@Override
-//			public void run() {
-//				for (int i = 0; i < 400; i++) {
-//					ticket.sale();
-//				}
-//			}
-//		}, "AA").start();
-//		new Thread(new Runnable() {
-//			
-//			@Override
-//			public void run() {
-//				for (int i = 0; i < 400; i++) {
-//					ticket.sale();
-//				}
-//			}
-//		}, "BB").start();
-//		new Thread(new Runnable() {
-//	
-//			@Override
-//			public void run() {
-//				for (int i = 0; i < 400; i++) {
-//					ticket.sale();
-//				}
-//			}
-//		}, "CC").start();
-//
 	}
 
 }
