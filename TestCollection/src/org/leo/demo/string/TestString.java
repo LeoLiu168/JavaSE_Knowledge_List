@@ -1,4 +1,4 @@
-package org.leo.demo.arrays;
+package org.leo.demo.string;
 
 import java.io.UnsupportedEncodingException;
 
