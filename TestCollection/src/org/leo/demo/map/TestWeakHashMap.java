@@ -18,7 +18,5 @@ public class TestWeakHashMap {
 		System.runFinalization();
 		//此时whm仅保留一个强引用的Java键值对
 		System.out.println(whm);
-		
 	}
-
 }
