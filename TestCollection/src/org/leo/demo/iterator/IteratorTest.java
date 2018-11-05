@@ -14,6 +14,7 @@ public class IteratorTest {
 		books.add("资本论");
 		books.add("自然辩证法");
 		books.add("1");
+		//Java8的增强条件删除,需要传入函数式条件
 		books.removeIf(ele -> ele.length() < 3);
 		
 		Iterator<String> it = books.iterator();
