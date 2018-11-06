@@ -22,7 +22,5 @@ public class ThreadYield {
 
 	public static void main(String[] args) {
 		IntStream.range(0, 2).mapToObj(ThreadYield::create).forEach(Thread::start);
-
 	}
-
 }

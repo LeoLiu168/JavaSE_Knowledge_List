@@ -31,6 +31,4 @@ public class ThreadSleep {
 		System.out.println(String.format("Main thread total spend %d second", (endTime - startTime)));
 		
 	}
-	
-
 }

@@ -14,5 +14,4 @@ public class TestIdentityHashMap {
 		ihm.put("Java", 11);
 		System.out.println(ihm);
 	}
-
 }

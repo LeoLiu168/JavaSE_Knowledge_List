@@ -29,10 +29,10 @@ public class ThreadJoin {
 		List<Thread> threads = IntStream.range(1, 3).mapToObj(ThreadJoin::create).collect(Collectors.toList());
 		
 		threads.forEach(Thread::start);
-		
-//		for(Thread thread : threads) {
-//			thread.join();
-//		}
+		//main线程调用join方法, 会进入阻塞, 等其它线程完成了再行继续
+		for(Thread thread : threads) {
+			thread.join();
+		}
 		
 		for(int i = 0; i < 10; i++) {
 			System.out.println(Thread.currentThread().getName() + "#" + i);

@@ -9,7 +9,7 @@ public class ThreadPriority {
 				System.out.println("t11111");
 			}
 		}, "t1");
-		t1.setPriority(3);
+		t1.setPriority(Thread.NORM_PRIORITY);
 		
 		Thread t2 = new Thread(()->{
 			while (true) {
