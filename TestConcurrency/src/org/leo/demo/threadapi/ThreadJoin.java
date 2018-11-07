@@ -29,7 +29,7 @@ public class ThreadJoin {
 		List<Thread> threads = IntStream.range(1, 3).mapToObj(ThreadJoin::create).collect(Collectors.toList());
 		
 		threads.forEach(Thread::start);
-		//main线程调用join方法, 会进入阻塞, 等其它线程完成了再行继续
+		//在main线程中, 依次调用thread的join方法, main会进入阻塞, 等其它线程完成了再行继续
 		for(Thread thread : threads) {
 			thread.join();
 		}

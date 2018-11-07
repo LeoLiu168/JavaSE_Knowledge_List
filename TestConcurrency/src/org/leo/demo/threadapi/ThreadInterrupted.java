@@ -22,11 +22,11 @@ public class ThreadInterrupted {
 		//Main sleep to make sure thread start
 		TimeUnit.MILLISECONDS.sleep(2);
 		thread.interrupt();
-		
+		//以下显示false
 		System.out.println("Main thread is interrupted? " + Thread.interrupted());
 		
 		Thread.currentThread().interrupt();
-		
+		//以下显示true
 		System.out.println("Main thread is interrupted? " + Thread.currentThread().isInterrupted());
 		
 		try {
@@ -34,7 +34,5 @@ public class ThreadInterrupted {
 		} catch (Exception e) {
 			System.out.println("I am be interrupted!!!!!!");
 		}
-
 	}
-
 }
