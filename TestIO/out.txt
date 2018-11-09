@@ -1,0 +1,2 @@
+普通字符串
+org.leo.demo.stream.RedirectOut@33909752
