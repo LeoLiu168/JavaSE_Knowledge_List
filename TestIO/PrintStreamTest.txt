@@ -1,2 +1,0 @@
-普通字符串
-org.leo.demo.stream.PrintStreamTest@33909752
