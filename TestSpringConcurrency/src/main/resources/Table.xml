@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <!--  
+    <bean id="TableDemo" class="org.leo.demo.dp.di.TableDemo">
+    	<constructor-arg ref="AgeColumn"></constructor-arg>
+    </bean>
+    -->
+    <bean id="EmployeeTable" class="org.leo.demo.db.aop.EmployeeTable">
+    	<constructor-arg ref="AgeColumn"></constructor-arg>
+    </bean>
+    
+    <bean id="AgeColumn" class="org.leo.demo.dp.di.AgeColumn">
+    	<constructor-arg value="#{T(System).out}"></constructor-arg>
+    </bean>
+    
+    <bean id="EmployeeTableLog" class="org.leo.demo.db.aop.EmployeeTableLog">
+    	<constructor-arg value="#{T(System).out}"></constructor-arg>
+    </bean>
+    
+    <aop:config>
+    	<aop:aspect ref="EmployeeTableLog">
+    		<aop:pointcut id="sumField"
+    			expression="execution(* *.sumOnColumn(..))"></aop:pointcut>
+    		<aop:before pointcut-ref="sumField" method="logBeforeSum"></aop:before>	
+    		<aop:after pointcut-ref="sumField" method="logAfterSum"></aop:after>
+    	</aop:aspect>
+    </aop:config>
+</beans>
